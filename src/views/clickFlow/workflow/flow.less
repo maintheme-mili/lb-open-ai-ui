@@ -1,0 +1,75 @@
+#flow-container {
+  position: relative;
+  height: 320px;
+  margin-top: 40px;
+
+  .react-flow__attribution.bottom.right {
+    display: none;
+  }
+
+  .flow-node {
+    .custom-node {
+      &.normal {
+        font-family: jetbrains-mono, "JetBrains Mono", monospace;
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        min-height: 50px;
+        width: 120px;
+        border: 2px solid rgb(85, 85, 85);
+        padding: 4px;
+        border-radius: 5px;
+        background: white;
+
+        .custom-node-body {
+          display: block;
+          width: 100%;
+          font-size: 14px;
+          text-align: center;
+        }
+      }
+
+      &.false {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+
+      &.prompt {
+        min-height: 58px;
+        width: 128px;
+        border: 2px solid rgb(85, 85, 85);
+        border-radius: 5px;
+        background: white;
+        font-family: jetbrains-mono, "JetBrains Mono", monospace;
+
+        .custom-node-header {
+          display: block;
+          height: 25px;
+          line-height: 25px;
+          width: 128px;
+          background: rgb(238, 238, 238);
+          border-top-left-radius: 5px;
+          border-top-right-radius: 5px;
+          border-bottom: 1px solid rgb(85, 85, 85);
+          border-top-color: rgb(85, 85, 85);
+          border-right-color: rgb(85, 85, 85);
+          border-left-color: rgb(85, 85, 85);
+          font-size: 14px;
+          text-align: center;
+          font-weight: bold;
+        }
+
+        .custom-node-body {
+          padding: 0px 2px;
+          border-color: rgb(238, 238, 238);
+          display: block;
+          width: 120px;
+          overflow-y: auto;
+          font-size: 14px;
+          text-align: center;
+          line-height: 30px;
+        }
+      }
+    }
+  }
+}

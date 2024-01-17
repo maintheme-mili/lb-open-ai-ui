@@ -1,0 +1,300 @@
+
+.chat_tool_container {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  .refresh_btn,
+  .export_btn {
+    //width: 24px;
+    height: 24px;
+    padding: 0 5px;
+    background: #f3f3f3;
+    border-radius: 4px 4px 4px 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    i {
+      width: 16px;
+      height: 16px;
+      //background: url('../../static/chattool-refresh-icon.png') no-repeat;
+      background-size: contain;
+    }
+  }
+  .export_btn {
+    border-radius: 4px;
+    margin-left: 14px;
+    padding: 5px 10px;
+    i {
+      width: 16px;
+      height: 16px;
+      //background: url('../../static/chattool-screen-icon.png') no-repeat;
+      background-size: contain;
+    }
+  }
+}
+.modal_container {
+  .ant-modal-content {
+    background: #ffffff;
+    box-shadow: 0px 0px 30px 1px rgba(0, 0, 0, 0.08);
+    border-radius: 16px 16px 16px 16px;
+    opacity: 1;
+    .ant-modal-body {
+      padding: 34px 0 34px 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  .title_con {
+    width: 221px;
+    height: 28px;
+    line-height: 28px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #202020;
+    -webkit-background-clip: text;
+    margin-bottom: 18px;
+    text-align: center;
+  }
+  .radio_tabs {
+    .ant-radio-inner {
+      border-radius: 50%;
+      width: 16px;
+      height: 16px;
+      border: 1px solid #d9d9d9;
+    }
+    .ant-radio-checked .ant-radio-inner {
+      background-color: transparent;
+      border-color: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform: scale(1);
+      position: relative;
+      box-shadow: none;
+
+      &::after {
+        position: absolute;
+        top: -4px;
+        left: 0;
+        width: 30px;
+        height: 30px;
+        font-family: 'iconfont' !important;
+        font-size: 30px;
+        font-style: normal;
+        content: '\e975'; //icon 图标 （对勾）
+        z-index: 1;
+        color: #8a55fe;
+        background-color: transparent;
+        transition: none;
+      }
+    }
+    .ant-radio-wrapper {
+      margin-right: 60px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    .ant-radio-checked::after {
+      animation: none;
+    }
+    .ant-radio:hover::after,
+    .ant-radio-wrapper:hover .ant-radio::after {
+      visibility: hidden;
+    }
+
+    .ant-radio-inner::after {
+      transition: none;
+    }
+    .ant-radio-checked .ant-radio-inner::after {
+      transition: none;
+    }
+  }
+  .canvas_upload {
+    width: 655px;
+    position: relative;
+    //border-radius: 16px 16px 16px 16px;
+    //overflow: hidden;
+
+  }
+  .canvas_left_container {
+    width: 655px;
+    max-height: 444px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    margin-top: 24px;
+    border-radius: 16px 16px 16px 16px;
+    background-color: #f4f4f4;
+  }
+  .canvas_left {
+    width: 100%;
+    //padding: 20px 28px 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+    border-radius: 16px 16px 16px 16px;
+
+    .content-item {
+      //margin-bottom: 20px;
+      padding: 30px;
+
+      h1 {
+        border-radius: 8px 8px 0 0;
+        font-size: 1.4rem;
+        display: flex;
+        padding: 10px 48px;
+        align-items: center;
+        min-height: 50px;
+        background-color: #e2e8f0;
+      }
+      .message-items {
+        border-radius: 0 0 8px 8px;
+        background: #efefef;
+        padding: 20px 48px;
+        min-height: 50px;
+
+        .ai-content-box {
+          display: flex;
+          flex-wrap: nowrap;
+          .ai-answer {
+            max-width: 463px;
+            display: flex;
+            align-items: center;
+          }
+          .response-box {
+            width: 100%;
+          }
+        }
+
+        .user-image {
+          background: #4cc161;
+        }
+      }
+    }
+
+  }
+  .canvas_right {
+    width: 655px;
+    max-height: 444px;
+    margin-top: 24px;
+    background-color: #f4f4f4;
+    border-radius: 16px 16px 16px 16px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+  .canvas_right_con {
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+    border-radius: 16px 16px 16px 16px;
+    padding: 30px;
+
+    .content-item {
+      //margin-bottom: 20px;
+
+
+      h1 {
+        font-size: 1.4rem;
+        display: flex;
+        padding: 10px 48px;
+        align-items: center;
+        min-height: 50px;
+        background-color: #e2e8f0;
+      }
+      .message-items {
+        background: #efefef;
+        padding: 20px 48px;
+        min-height: 50px;
+
+        .ai-content-box {
+          display: flex;
+          flex-wrap: nowrap;
+          .ai-answer {
+            display: flex;
+            align-items: center;
+          }
+        }
+
+        .user-image {
+          background: #4cc161;
+        }
+      }
+    }
+
+    .content-item:first-child {
+      h1 {
+        border-radius: 8px 8px 0 0;
+      }
+    }
+    .content-item:last-child {
+      .message-items {
+        border-radius: 0 0 8px 8px;
+      }
+    }
+
+  }
+
+  .canvas_right,
+  .canvas_left_container {
+    &::-webkit-scrollbar {
+      /*滚动条整体样式*/
+      width: 6px; /*高宽分别对应横竖滚动条的尺寸*/
+    }
+    &::-webkit-scrollbar-thumb {
+      border-radius: 8px 8px 8px 8px;
+      background: #e4e5e7;
+      visibility: hidden;
+    }
+    &:hover {
+      &::-webkit-scrollbar-thumb {
+        visibility: visible;
+      }
+    }
+  }
+
+  .user-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    min-width: 26px;
+    height: 26px;
+    background: #4875bc;
+    font-weight: 900;
+    color: #fff;
+    margin-right: 10px;
+    //margin-top: 3px;
+    overflow: hidden;
+    border-radius: 26px;
+    border: 1px solid #e6e2e2;
+  }
+
+  .download_btn {
+
+    width: 210px;
+    height: 50px;
+    background: linear-gradient(219deg, #6468e7 0%, #8a55fe 100%);
+    border-radius: 6px 6px 6px 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 500;
+    color: #ffffff;
+    line-height: 50px;
+    margin-top: 22px;
+    cursor: pointer;
+
+    .save_icon {
+      width: 18px;
+      height: 18px;
+      //background: url('../../static/chattool-save-img.png') no-repeat;
+      background-size: contain;
+      margin-right: 10px;
+    }
+  }
+}

@@ -1,0 +1,56 @@
+#login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin: 0;
+  background-image: url(../../../public/images/jc_bk1_icon2.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  #ddlogin {
+    display: flex;
+    justify-content: center;
+  }
+  .form-box {
+    padding: 0 30px;
+    margin-top: 58px;
+  }
+  .login-box {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 6px;
+    height: 350px;
+    width: 400px;
+    .login-type {
+      margin-right: 20px;
+      cursor: pointer;
+      color: #333;
+      padding-bottom: 5px;
+    }
+  }
+  .login-tab-title {
+    background: #ffffff;
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 0 10px;
+  }
+  .acv-login-type {
+    border-bottom: 3px solid #1777ff;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .form-box {
+    width: auto !important;
+    margin-left: 5% !important;
+    margin-top: 20px !important;
+  }
+  .login_content {
+    width: 256px !important;
+    height: 400px;
+  }
+  #basic {
+    width: 250px;
+  }
+}

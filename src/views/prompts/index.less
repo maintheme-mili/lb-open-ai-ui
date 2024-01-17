@@ -1,0 +1,55 @@
+.main_layout {
+  height: 100%;
+  width: 100%;
+
+  .main_header {
+    display: flex;
+    align-items: center;
+
+    :where(.css-dev-only-do-not-override-mxhywb).ant-divider-vertical {
+      color: rgba(255, 255, 255, 0.88);
+      border-block-start: 1px solid rgba(255, 255, 255, 0.6);
+      border-inline-start: 1px solid rgba(255, 255, 255, 0.6);
+      vertical-align: middle;
+      margin: 0 20px;
+    }
+
+    .main_breadcrumb {
+      .ant-breadcrumb-link {
+        color: rgba(255, 255, 255, 0.88);
+      }
+
+      .ant-breadcrumb-separator {
+        color: rgba(255, 255, 255, 0.88);
+
+      }
+    }
+
+    .user_info {
+      margin-left: auto;
+      color: rgba(255, 255, 255, 0.88);
+    }
+
+
+  }
+
+  .main_container {
+
+    .main_sider {
+      padding: 20px;
+      margin-right: 20px;
+    }
+
+    .main_content_wrapper {
+      padding: 20px 20px 20px 10px;
+
+      .main_content {
+        background-color: #fff;
+        height: 100%;
+      }
+    }
+
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+}

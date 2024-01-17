@@ -1,0 +1,65 @@
+button{
+  outline: none !important;
+}
+.flow-add-modal {
+  .ant-modal-body {
+    display: flex;
+    line-height: 32px;
+    input {
+      width: calc(100% - 42px);
+    }
+  }
+}
+
+#click-flow {
+  width: 76%;
+  margin: 60px auto;
+
+  #flow-title {
+    background: #bee3f8;
+    padding-inline-start: 1rem;
+    padding-inline-end: 1rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    i {
+      color: #3182ce;
+      font-size: 20px;
+      margin-right: 0.75rem;
+    }
+
+    span {
+      font-weight: 700;
+    }
+
+    #title-add-btn {
+      margin-left: 10px;
+    }
+  }
+
+  #flow-cards {
+    display: grid;
+    grid-gap: 1rem;
+    position: relative;
+
+    #cards-loading {
+      position: absolute;
+      left: 50%;
+      top: 50px;
+      z-index: 1;
+    }
+  }
+
+  .flow-pagination {
+    margin-top: 50px;
+    text-align: center;
+  }
+
+  @media screen and (min-width: 48em) {
+    #flow-cards {
+      grid-template-columns: repeat(4, minmax(0px, 1fr));
+    }
+  }
+}

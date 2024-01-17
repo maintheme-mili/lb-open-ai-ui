@@ -1,0 +1,15 @@
+#login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin: 0;
+  background-image: url(../../../public/images/jc_bk1_icon2.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#login .form-box {
+  width: 400px;
+}

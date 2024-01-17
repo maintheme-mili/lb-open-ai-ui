@@ -1,0 +1,53 @@
+#chakra-container {
+  width: 100%;
+  -webkit-margin-start: auto;
+  margin-inline-start: auto;
+  -webkit-margin-end: auto;
+  margin-inline-end: auto;
+  -webkit-padding-start: 1rem;
+  padding-inline-start: 1rem;
+  -webkit-padding-end: 1rem;
+  padding-inline-end: 1rem;
+  max-width: 90rem;
+  padding: 1rem;
+
+  #breadcrumb-list {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+
+    .list-item {
+      display: inline-flex;
+      -webkit-box-align: center;
+      align-items: center;
+
+      a {
+        transition-property: background-color, border-color, color, fill, stroke,
+          opacity, box-shadow, transform;
+        transition-duration: 150ms;
+        transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+        cursor: pointer;
+        -webkit-text-decoration: none;
+        text-decoration: none;
+        outline: 2px solid transparent;
+        outline-offset: 2px;
+        color: inherit;
+        background-color: transparent;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      span {
+        margin-inline: 0.5rem;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 48em) {
+  #chakra-container {
+    padding: 2rem;
+  }
+}
